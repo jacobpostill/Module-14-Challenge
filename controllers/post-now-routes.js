@@ -1,7 +1,8 @@
+const withAuth = require('../utils/auth');
 const router = require('express').Router();
 const { Post } = require('../models');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     res.render('post-now', {loggedIn: req.session.loggedIn });
   } catch (err) {
@@ -10,7 +11,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   try {
     const data = await Post.findByPk(req.params.id);
     const post = data.get({ plain: true });
