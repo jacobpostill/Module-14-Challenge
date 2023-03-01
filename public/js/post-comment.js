@@ -1,13 +1,13 @@
 const postCommentHandler = async (event) => {
-  const postCommentId = document.getElementById('post-commentid').value.trim();
-  const postCommentDetail = document.getElementById('post-comment-detail').value.trim();
+  const commentId = document.getElementById('post-commentid').value.trim();
+  const commentDetail = document.getElementById('post-comment-detail').value.trim();
   const postid = document.getElementById('postid').value.trim();
 
   let fetchUrl = "", postMethod = "";
-  if (postCommentDetail) {  
-    if (postCommentId != "")
+  if (commentDetail) {  
+    if (commentId != "")
     {
-      fetchUrl = "/api/comments/" + postCommentId;
+      fetchUrl = "/api/comments/" + commentId;
       postMethod = "PUT";
     }
     else
@@ -17,7 +17,7 @@ const postCommentHandler = async (event) => {
     }
     const response = await fetch(fetchUrl, {
       method: postMethod,
-      body: JSON.stringify({ postid, postCommentDetail }),
+      body: JSON.stringify({ postid, commentDetail }),
       headers: { 'Content-Type': 'application/json' },
     });
     if (!response.ok) {

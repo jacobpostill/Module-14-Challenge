@@ -20,6 +20,5 @@ const dashboard = async () => {
     }
   };
   
-  
+  document.querySelector('#dashboard').addEventListener('click', dashboard);  
   document.querySelector('#logout').addEventListener('click', logout);
-  document.querySelector('#dashboard').addEventListener('click', dashboard);

@@ -1,12 +1,12 @@
 const postFormHandler = async (event) => {
   event.preventDefault();
-  const postSubject = document.getElementById('post-subject').value.trim();
-  const postDetail = document.getElementById('post-detail').value.trim();
-  const postImgurl = document.getElementById('post-imgurl').value.trim();
+  const subject = document.getElementById('post-subject').value.trim();
+  const detail = document.getElementById('post-detail').value.trim();
+  const imgurl = document.getElementById('post-imgurl').value.trim();
   const postId = document.getElementById('postid').value.trim();
 
   let fetchUrl = "", postMethod = "";
-  if (postSubject && postImgurl && postDetail) {
+  if (subject && imgurl && detail) {
     if (postId != "")
     {
       fetchUrl = "/api/posts/" + postId;
@@ -19,7 +19,7 @@ const postFormHandler = async (event) => {
     }
     const response = await fetch(fetchUrl, {
       method: postMethod,
-      body: JSON.stringify({ postSubject, postImgurl, postDetail }),
+      body: JSON.stringify({ subject, imgurl, detail }),
       headers: { 'Content-Type': 'application/json' },
     });
     if (response.ok) {
