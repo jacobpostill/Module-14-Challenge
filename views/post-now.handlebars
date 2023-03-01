@@ -8,18 +8,16 @@
         <input class="form-input" type="text" id="post-subject" value="{{post.subject}}"/>
       </div>
       <div class="form-group">
+        <label for="post-detail">Post Info:</label>
+        <textarea class="form-input"  id="post-detail" >{{post.detail}}</textarea>
+      </div>
+      <div class="form-group">
         <label for="post-img">Image URL:</label>
         <input class="form-input" type="text" id="post-imgurl" value="{{post.img_url}}" />
       </div>
       <div class="form-group">
-        <label for="post-detail">Post Info:</label>
-        <textarea class="form-input"  id="post-detail" >{{post.detail}}</textarea>
-
-      </div>
-      <div class="form-group">
         <button class="btn btn-primary" id="post-submit" type="button">Post</button>
       </div>
-
       <div class="form-group">
         <button class="btn btn-primary" id="post-delete" type="button">Delete</button>
       </div>
