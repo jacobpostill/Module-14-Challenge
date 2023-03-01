@@ -1,9 +1,10 @@
 <section class="container">
-  <div class="card">
-  <div class="post-subject">{{post.subject}}</div>
+<section class="gallery">
+  <div class="listCard2 card">
+  <div class="post-subject">{{post.subject}}</div><br>
+  <p class="post-detail"><br /> <br />{{post.detail}}</p><br/><br>
   <div class="post-by">Created by: {{format_time post.updated_time}}</div>
   <div class="post-img"><img src="{{img_url}}"></div>
-  <div class="post-detail">{{post.detail}}</div>
   </div>
 </section>
 
@@ -29,5 +30,5 @@
     {{> comment}}
     {{/each}}
   </section>
-
+</section>
 <script src="/js/post-comment.js"></script>

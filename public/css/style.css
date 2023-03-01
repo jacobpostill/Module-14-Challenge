@@ -74,7 +74,24 @@ nav a {
   margin-bottom: 5px;
   margin-right: 5px;
   margin-left: 5px;
+}
+#logout{
+  color: black;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
 
+#logout:hover{
+  color: var(--secondary);
+  background-color: DeepSkyBlue;
 }
 
 nav a:hover {
@@ -90,6 +107,7 @@ nav a:hover {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+
 }
 
 .btn-no-style {
@@ -199,15 +217,49 @@ img {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 2px;
-  background-color: deepskyblue;
 }
 .listCard{
   width: 700px;
   z-index: 1;
-
+  flex-basis: 700px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
+
 #listCard {
   border-color: dodgerblue;
   border-style: solid;
   padding: 5px;
+}
+.listCard2{
+  text-align: center;
+  align-items: center;
+}
+.post-subject{
+  text-align: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+
+@media screen and (max-width: 700px) {
+  div.listCard {
+    width: 300px;
+    z-index: 1;
+    flex-basis: 300px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+.post-detail {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#subject2{
+  font-size: 20px;
+}
+
+#commentid{
+  margin-top: 5px;
 }
