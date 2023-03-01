@@ -2,6 +2,7 @@ const { Post, Comment } = require('../../models');
 const router = require('express').Router();
 
 router.post('/', async (req, res) => {
+  console.log(req.session)
   try {
     const data = await Post.create({
       subject: req.body.postSubject,

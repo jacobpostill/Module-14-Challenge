@@ -12,6 +12,8 @@ router.post('/', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.userid = dbUserData.id;
+      req.session.username = dbUserData.username;
 
       res.status(200).json(dbUserData);
     });
@@ -48,6 +50,9 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.userid = dbUserData.id;
+      req.session.username = dbUserData.username;
+
       console.log(
         '🚀 ~ file: user-routes.js ~ line 57 ~ req.session.save ~ req.session.cookie',
         req.session.cookie
