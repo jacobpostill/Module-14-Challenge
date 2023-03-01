@@ -17,15 +17,13 @@
     <a href="/">Home</a>
     <a href="/dashboard">Dashboard</a>
     {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
+    <a href="/logout">logout</a>
     {{else}}
     <a href="/login">Login</a>
     {{/if}}
   </nav>
   <main>
-    <aside>
-      <h2>Enjoy the blog!</h2>
-    </aside>
+
     <div class="gallery">
       {{{body}}}
     </div>
@@ -33,6 +31,9 @@
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  <footer>
+    <h2>Enjoy the blog!</h2>
+  </footer>
 </body>
 
 </html>

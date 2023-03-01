@@ -31,10 +31,16 @@ a:visited {
 header {
   padding: 40px;
   text-align: center;
-  background: var(--primary);
   color: var(--light);
+  background-image: linear-gradient(DodgerBlue, DeepSkyBlue);
 }
+footer {
+  padding: 40px;
+  text-align: center;
+  color: var(--light);
+  background-image: linear-gradient( DeepSkyBlue,  DodgerBlue);
 
+}
 main {
   display: flex;
   flex-wrap: wrap;
@@ -43,7 +49,7 @@ main {
 
 aside {
   flex: 0;
-  background-color: var(--tertiary);
+  background-image: linear-gradient( DeepSkyBlue, powderblue);
   padding: 80px;
   text-align: left;
   color: var(--light);
@@ -51,19 +57,29 @@ aside {
 
 nav {
   display: flex;
-  background-color: var(--secondary);
+  background-color: skyblue;
+  text-align: center;
+
 }
 
 nav a {
-  color: var(--light);
+  color: black;
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+
 }
 
 nav a:hover {
   color: var(--secondary);
-  background-color: var(--dark);
+  background-color: DeepSkyBlue;
 }
 
 .gallery {
@@ -161,4 +177,17 @@ img {
   flex-flow: column wrap;
   align-content: flex-start;
   align-items: center;
+}
+
+#postnow {
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: dodgerblue;
+  color: white;
+}
+
+#postnow:hover {
+  color: var(--secondary);
+  background-color: var(--dark);
 }
