@@ -1,6 +1,6 @@
 const postCommentHandler = async (event) => {
-  const commentId = document.getElementById('post-commentid').value.trim();
-  const commentDetail = document.getElementById('post-comment-detail').value.trim();
+  const commentId = document.getElementById('commentid').value.trim();
+  const commentDetail = document.getElementById('comment-detail').value.trim();
   const postid = document.getElementById('postid').value.trim();
 
   let fetchUrl = "", postMethod = "";
@@ -28,4 +28,4 @@ const postCommentHandler = async (event) => {
 }
 };
 
-document.getElementById('post-comment-btn').addEventListener('click', postCommentHandler);
+document.getElementById('comment-btn').addEventListener('click', postCommentHandler);

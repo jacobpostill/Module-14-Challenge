@@ -1,8 +1,8 @@
 const postFormHandler = async (event) => {
   event.preventDefault();
-  const subject = document.getElementById('post-subject').value.trim();
-  const detail = document.getElementById('post-detail').value.trim();
-  const imgurl = document.getElementById('post-imgurl').value.trim();
+  const subject = document.getElementById('subject').value.trim();
+  const detail = document.getElementById('detail').value.trim();
+  const imgurl = document.getElementById('imgurl').value.trim();
   const postId = document.getElementById('postid').value.trim();
 
   let fetchUrl = "", postMethod = "";
@@ -48,5 +48,5 @@ const postDelete = async () => {
   }
 };
 
-document.getElementById('post-delete').addEventListener('click', postDelete);
-document.getElementById('post-submit').addEventListener('click', postFormHandler);
+document.getElementById('delete').addEventListener('click', postDelete);
+document.getElementById('submit').addEventListener('click', postFormHandler);
